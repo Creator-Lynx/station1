@@ -2203,6 +2203,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7847336295876817490, guid: f999cef82788d784dbe2251f2861b0b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: f999cef82788d784dbe2251f2861b0b9, type: 3}
+      propertyPath: field of view
+      value: 61.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: f999cef82788d784dbe2251f2861b0b9, type: 3}
+      propertyPath: m_FocalLength
+      value: 14.978516
+      objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: f999cef82788d784dbe2251f2861b0b9, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
