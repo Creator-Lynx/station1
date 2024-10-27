@@ -2834,11 +2834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: f15f7589d597e8444b86ea7882b913cc, type: 3}
       propertyPath: field of view
-      value: 37
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: f15f7589d597e8444b86ea7882b913cc, type: 3}
       propertyPath: m_FocalLength
-      value: 26.898167
+      value: 18.452734
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: f15f7589d597e8444b86ea7882b913cc, type: 3}
       propertyPath: m_BackGroundColor.b
