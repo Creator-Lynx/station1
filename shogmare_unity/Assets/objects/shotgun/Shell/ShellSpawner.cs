@@ -13,12 +13,16 @@ public class ShellSpawner : MonoBehaviour
             Debug.LogError("Need to create 'SHELLS' empty object to grouping dropped shells");
         }
     }
-    [SerializeField] GameObject shell;
+    [SerializeField] GameObject shell, shellPos1, shellPos2;
     GameObject Shells;
     public void SpawnShell()
     {
-        GameObject currentShell = Instantiate(shell, Shells.transform);
-
+        GameObject currentShell = Instantiate(shell,
+         shellPos1.transform.position, shellPos1.transform.rotation,
+         Shells.transform);
+        GameObject currentShell2 = Instantiate(shell,
+         shellPos2.transform.position, shellPos2.transform.rotation,
+         Shells.transform);
     }
     // Update is called once per frame
     void Update()
