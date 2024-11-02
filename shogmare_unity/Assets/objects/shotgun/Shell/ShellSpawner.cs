@@ -12,7 +12,8 @@ public class ShellSpawner : MonoBehaviour
     [SerializeField] GameObject shell;
     public void SpawnShell()
     {
-        Instantiate(shell);
+        GameObject currentShell = Instantiate(shell);
+
     }
     // Update is called once per frame
     void Update()
