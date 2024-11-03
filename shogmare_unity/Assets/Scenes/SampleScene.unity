@@ -15329,7 +15329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: b59a79e928de613449fc0d2a5895d666, type: 2}
   isGlobal: 1
-  blendDistance: 0
+  blendDistance: 70.41
   weight: 1
   priority: 0
 --- !u!4 &1868868192
@@ -15339,8 +15339,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868868190}
-  m_LocalRotation: {x: -0, y: -0.5717531, z: -0, w: 0.8204258}
-  m_LocalPosition: {x: 4.39, y: 0.914, z: -4.17}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
