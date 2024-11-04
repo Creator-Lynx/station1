@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 3386403701672087009}
   - component: {fileID: 3386403701672087015}
   m_Layer: 0
-  m_Name: shoga19
+  m_Name: ShotgunPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
