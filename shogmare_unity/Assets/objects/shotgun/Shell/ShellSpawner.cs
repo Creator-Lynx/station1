@@ -28,8 +28,8 @@ public class ShellSpawner : MonoBehaviour
          shellPos2.transform);
         /*this block needs to convert scale of prebab and shotgun, when using new Shotgun fbx
         you need to revert this two lines*/
-        //currentShell1.transform.localScale = 0.01f * Vector3.one;
-        //currentShell2.transform.localScale = 0.01f * Vector3.one;
+        currentShell1.transform.localScale = 0.01f * Vector3.one;
+        currentShell2.transform.localScale = 0.01f * Vector3.one;
         //=======================================
         rig1 = currentShell1.GetComponent<Rigidbody>();
         rig2 = currentShell2.GetComponent<Rigidbody>();
