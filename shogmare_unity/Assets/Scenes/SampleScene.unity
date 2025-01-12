@@ -16619,6 +16619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1977432319}
+  - component: {fileID: 1977432320}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Untagged
@@ -16643,6 +16644,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977432320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977432318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abf7c9b5d86ed84c9be7926a5689cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShotgunAnimator: {fileID: 193983044}
+  firstShot: firstShot
+  secondShot: secondShot
+  doubleShot: doubleShot
+  reload: reloadHalf
 --- !u!4 &1978805484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2249142142501001982, guid: a42a3c7837b5c9c4fae181c1f85fc8c5, type: 3}
