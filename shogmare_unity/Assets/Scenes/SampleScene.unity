@@ -1944,7 +1944,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2015,8 +2015,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_ClearFlags
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
+      propertyPath: far clip plane
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: near clip plane
@@ -2049,6 +2057,10 @@ PrefabInstance:
     - target: {fileID: 65702495048144492, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 872768936890015563, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_Layer
@@ -7187,7 +7199,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.8, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1977432319}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &808296602
 GameObject:
@@ -13995,7 +14007,7 @@ Camera:
   m_GameObject: {fileID: 1592950622}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -14009,7 +14021,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.79
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 90
   orthographic: 0
@@ -14041,7 +14053,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1977432319}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1597964852
 PrefabInstance:
@@ -16625,9 +16637,9 @@ Transform:
   m_LocalPosition: {x: 0.463, y: 0, z: -0.976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1592950625}
   - {fileID: 193983045}
   - {fileID: 802118310}
-  - {fileID: 1592950625}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
