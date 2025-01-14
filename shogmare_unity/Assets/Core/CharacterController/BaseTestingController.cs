@@ -18,6 +18,7 @@ public class BaseTestingController : MonoBehaviour
     [SerializeField]
     float mouseSensivity = 5f;
     const float mouseSensivityConst = 1f;
+    Transform mainCamera;
     void Update()
     {
         ShootingInput();
@@ -95,8 +96,12 @@ public class BaseTestingController : MonoBehaviour
     void CameraInput()
     {
         float x = Input.GetAxis("Mouse X") * mouseSensivity * mouseSensivityConst;
-
         characterController.transform.Rotate(Vector3.up, x);
+
+        float y = Input.GetAxis("Mouse Y") * mouseSensivity * mouseSensivityConst;
+        float currentY = mainCamera.transform.localEulerAngles.x - y;
+
+        mainCamera.transform.localEulerAngles = new Vector3(currentY, 0f, 0f);
     }
     private void FixedUpdate()
     {
@@ -107,6 +112,6 @@ public class BaseTestingController : MonoBehaviour
         isFirstShot = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        mainCamera = Camera.main.transform;
     }
 }
