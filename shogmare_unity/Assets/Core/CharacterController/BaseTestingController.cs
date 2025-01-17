@@ -110,11 +110,32 @@ public class BaseTestingController : MonoBehaviour
         lookVert = lookVert > 180f ? lookVert - 360f : lookVert;
 
         lookHor += lookVector.x * mouseSensivity * mouseSensivityConst;
+        WeaponInertAnimation(lookVector.x * mouseSensivity * mouseSensivityConst);
         lookVert += lookVector.y * mouseSensivity * mouseSensivityConst * -1f;
         lookVert = Mathf.Clamp(lookVert, -90, 90);
 
         transform.rotation = Quaternion.Euler(0, lookHor, 0);
         mainCamera.transform.localRotation = Quaternion.Euler(lookVert, 0, 0);
+    }
+
+    //shotgun innertion procedural animation
+    [Space]
+    [SerializeField]
+    Transform WeaponCamera;
+    [SerializeField]
+    float maxInputDelta = 5f, maxAngleDelta = 5f, lerpSpeed = 3f;
+    [SerializeField] float testBeforeLerp, testAfterLerp;
+    void WeaponInertAnimation(float deltaAngle)
+    {
+        var inputDelta = Mathf.Clamp(deltaAngle, -maxInputDelta, maxInputDelta);
+        var interpolated01 = inputDelta + maxInputDelta / (2 * maxInputDelta);
+        var targetLocalWeaponRotationAngleY = Mathf.Lerp(-maxAngleDelta, maxAngleDelta, interpolated01);
+        var y = WeaponCamera.localRotation.eulerAngles.y;
+        var fix360rot = y > 180 ? y - 360 : y;
+        var rotationY = Mathf.Lerp(fix360rot, targetLocalWeaponRotationAngleY, Time.deltaTime * lerpSpeed);
+        testBeforeLerp = y;
+        testAfterLerp = rotationY;
+        WeaponCamera.localRotation = Quaternion.Euler(0f, rotationY, 0f);
     }
     private void FixedUpdate()
     {

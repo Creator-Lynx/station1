@@ -1940,7 +1940,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1592950625}
+    m_TransformParent: {fileID: 483562601}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
       propertyPath: m_RootOrder
@@ -9141,6 +9141,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2249142142501001982, guid: a42a3c7837b5c9c4fae181c1f85fc8c5, type: 3}
   m_PrefabInstance: {fileID: 406395774}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &483562600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483562601}
+  m_Layer: 0
+  m_Name: ShotgunContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483562601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483562600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 193983045}
+  m_Father: {fileID: 1592950625}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489606087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18389,6 +18420,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!4 &1556007290 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2021178655527167927, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
+  m_PrefabInstance: {fileID: 193983039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1559266574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18938,7 +18974,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.332, z: 0.217}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 193983045}
+  - {fileID: 483562601}
   m_Father: {fileID: 1977432319}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21551,6 +21587,12 @@ MonoBehaviour:
   characterController: {fileID: 1977432321}
   MoveSpeed: 2.5
   mouseSensivity: 2.5
+  WeaponCamera: {fileID: 1556007290}
+  maxInputDelta: 20
+  maxAngleDelta: 10
+  lerpSpeed: 5
+  testBeforeLerp: 0
+  testAfterLerp: 0
 --- !u!143 &1977432321
 CharacterController:
   m_ObjectHideFlags: 0
