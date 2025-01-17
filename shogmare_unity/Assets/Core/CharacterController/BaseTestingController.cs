@@ -95,13 +95,15 @@ public class BaseTestingController : MonoBehaviour
     }
     void CameraInput()
     {
-        float x = Input.GetAxis("Mouse X") * mouseSensivity * mouseSensivityConst;
+        float x = Input.GetAxisRaw("Mouse X") * mouseSensivity * mouseSensivityConst;
         characterController.transform.Rotate(Vector3.up, x);
 
-        float y = Input.GetAxis("Mouse Y") * mouseSensivity * mouseSensivityConst;
-        float currentY = mainCamera.transform.localEulerAngles.x - y;
-
+        float vertical = Input.GetAxisRaw("Mouse Y") * mouseSensivity * mouseSensivityConst;
+        Debug.Log(vertical);
+        float currentY = mainCamera.transform.localEulerAngles.x - vertical;
         mainCamera.transform.localEulerAngles = new Vector3(currentY, 0f, 0f);
+        //float currentVertical = mainCamera.transform.localRotation.x - vertical;
+        //mainCamera.transform.localRotation = Quaternion.Euler(currentVertical, 0f, 0f);
     }
     private void FixedUpdate()
     {
