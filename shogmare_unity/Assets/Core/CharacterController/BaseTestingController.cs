@@ -23,7 +23,7 @@ public class BaseTestingController : MonoBehaviour
     {
         ShootingInput();
         MovinInput();
-        CameraInput();
+        CameraInput(new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")));
     }
     void ShootingInput()
     {
@@ -93,17 +93,28 @@ public class BaseTestingController : MonoBehaviour
         transform.right * moving.x;
         characterController.Move(finalMoving * Time.deltaTime * MoveSpeed);
     }
-    void CameraInput()
+    void CameraInput(Vector2 lookVector)
     {
-        float x = Input.GetAxisRaw("Mouse X") * mouseSensivity * mouseSensivityConst;
-        characterController.transform.Rotate(Vector3.up, x);
-
-        float vertical = Input.GetAxisRaw("Mouse Y") * mouseSensivity * mouseSensivityConst;
-        Debug.Log(vertical);
-        float currentY = mainCamera.transform.localEulerAngles.x - vertical;
-        mainCamera.transform.localEulerAngles = new Vector3(currentY, 0f, 0f);
+        //float x = Input.GetAxisRaw("Mouse X") * mouseSensivity * mouseSensivityConst;
+        //characterController.transform.Rotate(Vector3.up, x);
+        //
+        //float vertical = Input.GetAxisRaw("Mouse Y") * mouseSensivity * mouseSensivityConst;
+        //Debug.Log(vertical);
+        //float currentY = mainCamera.transform.localEulerAngles.x - vertical;
+        //mainCamera.transform.localEulerAngles = new Vector3(currentY, 0f, 0f);
         //float currentVertical = mainCamera.transform.localRotation.x - vertical;
         //mainCamera.transform.localRotation = Quaternion.Euler(currentVertical, 0f, 0f);
+
+        var lookHor = transform.rotation.eulerAngles.y;
+        var lookVert = mainCamera.transform.localEulerAngles.x;
+        lookVert = lookVert > 180f ? lookVert - 360f : lookVert;
+
+        lookHor += lookVector.x * mouseSensivity * mouseSensivityConst;
+        lookVert += lookVector.y * mouseSensivity * mouseSensivityConst * -1f;
+        lookVert = Mathf.Clamp(lookVert, -90, 90);
+
+        transform.rotation = Quaternion.Euler(0, lookHor, 0);
+        mainCamera.transform.localRotation = Quaternion.Euler(lookVert, 0, 0);
     }
     private void FixedUpdate()
     {
