@@ -9,6 +9,7 @@ public class BaseTestingController : MonoBehaviour
     [SerializeField] string secondShot = "secondShot";
     [SerializeField] string doubleShot = "doubleShot";
     [SerializeField] string reload = "reloadHalf";
+    [SerializeField] string walk = "isWalk";
     [Space]
     [Header("Moving Controller")]
     [SerializeField] CharacterController characterController;
@@ -88,6 +89,7 @@ public class BaseTestingController : MonoBehaviour
         }
         else moving.x = 0;
         moving.Normalize();
+        ShotgunAnimator.SetBool(walk, moving != Vector3.zero);
         Vector3 finalMoving =
         transform.forward * moving.z +
         transform.right * moving.x;
