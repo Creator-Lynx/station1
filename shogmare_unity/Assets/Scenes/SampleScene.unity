@@ -18035,7 +18035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: b59a79e928de613449fc0d2a5895d666, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 5.5
   weight: 1
   priority: 23.6
@@ -21344,13 +21344,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772727183}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 1.26, z: 2.94}
+  m_LocalRotation: {x: -0.359888, y: 0.71373904, z: -0.2627462, w: 0.54039043}
+  m_LocalPosition: {x: -0.4, y: 1.26, z: 2.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.796, y: 106.136, z: -52.919}
 --- !u!1 &1783128226
 GameObject:
   m_ObjectHideFlags: 0
