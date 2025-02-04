@@ -24185,6 +24185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1977432319}
   - component: {fileID: 1977432320}
+  - component: {fileID: 1977432322}
   - component: {fileID: 1977432321}
   m_Layer: 0
   m_Name: CHARACTER
@@ -24254,6 +24255,45 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &1977432322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977432318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0670df6a9f50bce4990cc2c18155420c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotAction:
+    m_Name: Shot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 02c3a473-ed5d-4dc3-b1d7-11dae13e1d3c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  doubleShotAction:
+    m_Name: Double Shot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9069da0c-886b-4057-8a1a-fc4dccf80ab6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  reloadAction:
+    m_Name: Reload
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 92f0c41b-cf2e-4d35-ad93-4b44d871fea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1985081883
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class BaseTestingController : MonoBehaviour
     Transform mainCamera;
     void Update()
     {
-        ShootingInput();
+        //ShootingInput();
         MovinInput();
         CameraInput(new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")));
     }
