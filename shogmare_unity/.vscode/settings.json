@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "shogmare_unity.sln"
+    "dotnet.defaultSolution": "shogmare_unity.sln",
+    "dotnet.preferCSharpExtension": true
 }

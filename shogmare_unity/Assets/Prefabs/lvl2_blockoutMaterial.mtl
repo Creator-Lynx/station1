@@ -1,0 +1,6 @@
+# Define a new material with default name
+newmtl Default
+# Diffuse/Tint color
+Kd 0,2641509 0,2641509 0,2641509
+d 1
+Tr 0
