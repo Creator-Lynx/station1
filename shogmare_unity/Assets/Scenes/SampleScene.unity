@@ -24606,6 +24606,7 @@ GameObject:
   - component: {fileID: 1977432319}
   - component: {fileID: 1977432320}
   - component: {fileID: 1977432322}
+  - component: {fileID: 1977432323}
   - component: {fileID: 1977432321}
   m_Layer: 0
   m_Name: CHARACTER
@@ -24714,6 +24715,23 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+--- !u!114 &1977432323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977432318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e379f8bc1b54b614bb1bf7f27a02ea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstShot: firstShot
+  secondShot: secondShot
+  doubleShot: doubleShot
+  reload: reloadHalf
+  ShotgunAnimator: {fileID: 0}
 --- !u!1 &1985081883
 GameObject:
   m_ObjectHideFlags: 0
