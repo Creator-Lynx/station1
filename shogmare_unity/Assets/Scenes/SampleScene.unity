@@ -2170,33 +2170,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3179348312997410703, guid: 1fdd12fa4931b3f4887098c4734dfed9, type: 3}
   m_PrefabInstance: {fileID: 193983039}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &193983042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193983040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3814ff37f65339e4b98fe5e172e252ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shot:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 861473022}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &193983043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24608,6 +24581,7 @@ GameObject:
   - component: {fileID: 1977432322}
   - component: {fileID: 1977432323}
   - component: {fileID: 1977432321}
+  - component: {fileID: 1977432324}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Player
@@ -24756,6 +24730,48 @@ MonoBehaviour:
   doubleShot: doubleShot
   reload: reloadHalf
   ShotgunAnimator: {fileID: 193983044}
+--- !u!114 &1977432324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977432318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3814ff37f65339e4b98fe5e172e252ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 861473022}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  endOfAnimation:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1977432323}
+        m_TargetAssemblyTypeName: CharacterShootingGameplayController, Assembly-CSharp
+        m_MethodName: SetReadyToShootByAnimator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1985081883
 GameObject:
   m_ObjectHideFlags: 0
