@@ -24695,7 +24695,15 @@ MonoBehaviour:
     m_Id: 02c3a473-ed5d-4dc3-b1d7-11dae13e1d3c
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d5989ca4-6e32-423e-bcfa-272f2663a07f
+      m_Path: <Mouse>/leftButton
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shot
+      m_Flags: 0
     m_Flags: 0
   doubleShotAction:
     m_Name: Double Shot
@@ -24704,7 +24712,15 @@ MonoBehaviour:
     m_Id: 9069da0c-886b-4057-8a1a-fc4dccf80ab6
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 65315598-d303-4cdd-856c-9f7c12f7d795
+      m_Path: <Mouse>/rightButton
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Double Shot
+      m_Flags: 0
     m_Flags: 0
   reloadAction:
     m_Name: Reload
@@ -24713,7 +24729,15 @@ MonoBehaviour:
     m_Id: 92f0c41b-cf2e-4d35-ad93-4b44d871fea8
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 328703e6-8e52-4eaf-a911-6008178c3a5b
+      m_Path: <Keyboard>/#(R)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Reload
+      m_Flags: 0
     m_Flags: 0
 --- !u!114 &1977432323
 MonoBehaviour:
@@ -24731,7 +24755,7 @@ MonoBehaviour:
   secondShot: secondShot
   doubleShot: doubleShot
   reload: reloadHalf
-  ShotgunAnimator: {fileID: 0}
+  ShotgunAnimator: {fileID: 193983044}
 --- !u!1 &1985081883
 GameObject:
   m_ObjectHideFlags: 0

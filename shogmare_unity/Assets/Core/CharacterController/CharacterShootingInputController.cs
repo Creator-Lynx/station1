@@ -1,17 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+[RequireComponent(typeof(CharacterShootingGameplayController))]
 public class CharacterShootingInputController : MonoBehaviour
 {
 
     [SerializeField] InputAction shotAction;
     [SerializeField] InputAction doubleShotAction;
     [SerializeField] InputAction reloadAction;
+    CharacterShootingGameplayController shootingGameplayController;
     void Awake()
     {
         shotAction.performed += ctx => { OnShot(ctx); };
         doubleShotAction.performed += ctx => { OnDoubleShot(ctx); };
         reloadAction.performed += ctx => { OnReload(ctx); };
+        shootingGameplayController = GetComponent<CharacterShootingGameplayController>();
     }
 
 
@@ -24,15 +26,15 @@ public class CharacterShootingInputController : MonoBehaviour
 
     void OnShot(InputAction.CallbackContext context)
     {
-        //shot code here
+        shootingGameplayController.MakeOneShoot();
     }
     void OnDoubleShot(InputAction.CallbackContext context)
     {
-        //doubleshot code here
+        shootingGameplayController.MakeDoubleShoot();
     }
     void OnReload(InputAction.CallbackContext context)
     {
-        //reload code here
+        shootingGameplayController.MakeReload();
     }
 
 
