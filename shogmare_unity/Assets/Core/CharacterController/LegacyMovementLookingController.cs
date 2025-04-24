@@ -14,6 +14,7 @@ public class LegacyMovementLookingController : MonoBehaviour
     [Header("Moving Controller")]
     [SerializeField] CharacterController characterController;
     [SerializeField] float MoveSpeed = 5f;
+    [SerializeField] float GravityMovingSpeedModifier = 2f;
     bool isFirstShot = true;
     [Header("Mouse Sensivity")]
     [SerializeField]
@@ -26,6 +27,8 @@ public class LegacyMovementLookingController : MonoBehaviour
         MovingInput();
         CameraInput(new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")));
     }
+
+
     void ShootingInput()
     {
         //shooting input
@@ -93,6 +96,10 @@ public class LegacyMovementLookingController : MonoBehaviour
         Vector3 finalMoving =
         transform.forward * moving.z +
         transform.right * moving.x;
+        if(!characterController.isGrounded)
+        {
+            finalMoving.y -= GravityMovingSpeedModifier;
+        }
         characterController.Move(finalMoving * Time.deltaTime * MoveSpeed);
     }
     void CameraInput(Vector2 lookVector)
@@ -149,5 +156,6 @@ public class LegacyMovementLookingController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         mainCamera = Camera.main.transform;
+
     }
 }
